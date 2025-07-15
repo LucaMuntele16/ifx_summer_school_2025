@@ -1,0 +1,10 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++UVM_TESTNAME=ifx_dig_hello_world
+-svseed
+1234
+-gui
+-f
+run.args

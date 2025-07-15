@@ -1,0 +1,127 @@
+xrun(64): 24.09-s005: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s005: Started on Jul 14, 2025 at 13:05:04 EEST
+xrun
+	+UVM_TESTNAME=ifx_dig_hello_world
+	-svseed 1234
+	-gui
+	-f run.args
+		-64bit
+		+incdir+/home/student22/ifx_summer_school_2025
+		+incdir+/home/student22/ifx_summer_school_2025/source
+		+incdir+/home/student22/ifx_summer_school_2025/source/v
+		+incdir+/home/student22/ifx_summer_school_2025/source/v/rtl
+		+incdir+/home/student22/ifx_summer_school_2025/source/v/tb
+		+incdir+/home/student22/ifx_summer_school_2025/source/sv/filter_tb
+		+incdir+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/tb
+		+incdir+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include
+		+incdir+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs
+		+incdir+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_data_bus_uvc
+		+incdir+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_data_bus_uvc/ifx_dig_data_bus_uvc_pkg_and_if
+		+incdir+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_pin_filter_uvc
+		+incdir+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_pin_filter_uvc/ifx_dig_data_bus_uvc_pkg_and_if
+		+incdir+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/env
+		+incdir+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/env/registers
+		+incdir+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/tests
+		+incdir+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/seq_lib
+		-sv
+		-gui
+		/home/student22/ifx_summer_school_2025/source/sv/rtl/*.v
+		/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/env/ifx_dig_defines.svh
+		/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_data_bus_uvc/ifx_dig_data_bus_uvc_pkg_and_if/*.sv
+		/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_pin_filter_uvc/ifx_dig_pin_filter_uvc_pkg_and_if/*.sv
+		/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/env/registers/*.sv
+		/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/env/*.sv
+		/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/tests/*.sv
+		/home/student22/ifx_summer_school_2025/source/sv/filter_tb/tb/*.sv
+		-access rwc
+		-linedebug
+		-clean
+		-uvm
+		-uvmlinedebug
+		-coverage all
+		-covoverwrite
+		-timescale 1ns/1ps
+		-errormax 2
+		-ALLOWREDEFINITION
+		-top ifx_dig_top
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /opt/cadence/installs/XCELIUM2409/tools/methodology/UVM/CDNS-1.1d
+xmvlog: *W,NOTIND: unable to access -INCDIR /home/student22/ifx_summer_school_2025/source/v (No such file or directory).
+xmvlog: *W,NOTIND: unable to access -INCDIR /home/student22/ifx_summer_school_2025/source/v/rtl (No such file or directory).
+xmvlog: *W,NOTIND: unable to access -INCDIR /home/student22/ifx_summer_school_2025/source/v/tb (No such file or directory).
+xmvlog: *W,NOTIND: unable to access -INCDIR /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_pin_filter_uvc/ifx_dig_data_bus_uvc_pkg_and_if (No such file or directory).
+file: /home/student22/ifx_summer_school_2025/source/sv/rtl/filter.v
+	module worklib.filter:v
+		errors: 0, warnings: 0
+file: /home/student22/ifx_summer_school_2025/source/sv/rtl/register_bank.v
+	module worklib.register_block:v
+		errors: 0, warnings: 0
+file: /home/student22/ifx_summer_school_2025/source/sv/rtl/synchronizer_block.v
+	module worklib.synchronizer_block:v
+		errors: 0, warnings: 0
+file: /home/student22/ifx_summer_school_2025/source/sv/rtl/top_filter_bank.v
+	module worklib.top_filter_bank:v
+		errors: 0, warnings: 0
+file: /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/env/ifx_dig_defines.svh
+file: /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_data_bus_uvc/ifx_dig_data_bus_uvc_pkg_and_if/ifx_dig_data_bus_uvc_interface.sv
+	interface worklib.ifx_dig_data_bus_uvc_interface:sv
+		errors: 0, warnings: 0
+file: /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_data_bus_uvc/ifx_dig_data_bus_uvc_pkg_and_if/ifx_dig_data_bus_uvc_pkg.sv
+	package worklib.ifx_dig_data_bus_uvc_pkg:sv
+		errors: 0, warnings: 0
+file: /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_pin_filter_uvc/ifx_dig_pin_filter_uvc_pkg_and_if/ifx_dig_pin_filter_uvc_interface.sv
+	interface worklib.ifx_dig_pin_filter_uvc_interface:sv
+		errors: 0, warnings: 0
+file: /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_pin_filter_uvc/ifx_dig_pin_filter_uvc_pkg_and_if/ifx_dig_pin_filter_uvc_pkg.sv
+        seq_item.randomize(); // randomize item
+                         |
+xmvlog: *W,FUNTSK (/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_pin_filter_uvc/ifx_dig_pin_filter_uvc_sequence_lib.svh,92|25): function called as a task without void'().
+        seq_item.randomize(); // randomize item
+                         |
+xmvlog: *W,FUNTSK (/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_pin_filter_uvc/ifx_dig_pin_filter_uvc_sequence_lib.svh,121|25): function called as a task without void'().
+        seq_item.randomize() with {
+                         |
+xmvlog: *W,FUNTSK (/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_pin_filter_uvc/ifx_dig_pin_filter_uvc_sequence_lib.svh,154|25): function called as a task without void'().
+            std::randomize(pulses_clk) with {
+                          |
+xmvlog: *W,FUNTSK (/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_pin_filter_uvc/ifx_dig_pin_filter_uvc_sequence_lib.svh,199|26): function called as a task without void'().
+            std::randomize(pulses_clk) with {
+                          |
+xmvlog: *W,FUNTSK (/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_pin_filter_uvc/ifx_dig_pin_filter_uvc_sequence_lib.svh,234|26): function called as a task without void'().
+`timescale 1ps/1ps // force timescale in the drive to keep a consistent timing resolution
+                 |
+xmvlog: *W,TMSERX (/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_pin_filter_uvc/ifx_dig_pin_filter_uvc_driver.svh,15|17): `timescale must be used outside of design units; directive ignored [19.8(IEEE Std 1364-2005)].
+	package worklib.ifx_dig_pin_filter_uvc_pkg:sv
+		errors: 0, warnings: 6
+file: /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/env/registers/ifx_dig_regblock_pkg.sv
+	package worklib.ifx_dig_regblock_pkg:sv
+		errors: 0, warnings: 0
+file: /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/env/ifx_dig_pkg.sv
+	package worklib.ifx_dig_pkg:sv
+		errors: 0, warnings: 0
+file: /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/tests/ifx_dig_test_pkg.sv
+	package worklib.ifx_dig_test_pkg:sv
+		errors: 0, warnings: 0
+file: /home/student22/ifx_summer_school_2025/source/sv/filter_tb/tb/ifx_dig_interface.sv
+	interface worklib.ifx_dig_interface:sv
+		errors: 0, warnings: 0
+file: /home/student22/ifx_summer_school_2025/source/sv/filter_tb/tb/ifx_dig_top.sv
+        "ms": clk_half_per_ps = peropd*1e9/2;
+                                     |
+xmvlog: *E,UNDIDN (/home/student22/ifx_summer_school_2025/source/sv/filter_tb/tb/ifx_dig_top.sv,163|37): 'peropd': undeclared identifier [12.5(IEEE)].
+	module worklib.ifx_dig_top:sv
+		errors: 1, warnings: 0
+xmvlog: *W,SPDUSD: Include directory /home/student22/ifx_summer_school_2025 given but not used.
+xmvlog: *W,SPDUSD: Include directory /home/student22/ifx_summer_school_2025/source given but not used.
+xmvlog: *W,SPDUSD: Include directory /home/student22/ifx_summer_school_2025/source/sv/filter_tb given but not used.
+xmvlog: *W,SPDUSD: Include directory /home/student22/ifx_summer_school_2025/source/sv/filter_tb/tb given but not used.
+xmvlog: *W,SPDUSD: Include directory /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include given but not used.
+xmvlog: *W,SPDUSD: Include directory /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs given but not used.
+xmvlog: *W,SPDUSD: Include directory /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/uvcs/ifx_dig_data_bus_uvc/ifx_dig_data_bus_uvc_pkg_and_if given but not used.
+xmvlog: *W,SPDUSD: Include directory /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/env/registers given but not used.
+xmvlog: *W,SPDUSD: Include directory /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/seq_lib given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 13
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun(64)	24.09-s005: Exiting on Jul 14, 2025 at 13:05:07 EEST  (total: 00:00:03)
