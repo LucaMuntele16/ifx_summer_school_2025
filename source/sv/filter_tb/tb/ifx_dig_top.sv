@@ -68,8 +68,8 @@ module ifx_dig_top;
     //===========================================================================
 
     // TODO: --  add here instance for DUT
-    top_filter_bank #(.N(`FILT_NB)) (
-         .clk(clk),
+    top_filter_bank #(.N(`FILT_NB)) DUT (
+         .clk_i(clk),
         .rstn_i(rstn_i_w),
 
         // system data communication interface
@@ -160,7 +160,7 @@ module ifx_dig_top;
         case(time_unit)
         "ns": clk_half_per_ps = period*1000/2;
         "us": clk_half_per_ps = period*1e6/2;
-        "ms": clk_half_per_ps = peropd*1e9/2;
+        "ms": clk_half_per_ps = period*1e9/2;
         endcase
         clk = 0;
         forever begin

@@ -33,6 +33,7 @@ ${proj_root}/source/sv/filter_tb/include/env/*.sv
 ${proj_root}/source/sv/filter_tb/include/tests/*.sv
 ${proj_root}/source/sv/filter_tb/tb/*.sv
 
+-input run_gui.tcl
 -access rwc
 -linedebug
 -clean
