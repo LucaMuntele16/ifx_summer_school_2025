@@ -38,6 +38,7 @@ class ifx_dig_testbase extends uvm_test;
     ifx_dig_pin_filter_uvc_pulse_sequence pin_filter_pulse_seq;
     ifx_dig_pin_filter_uvc_generic_sequence pin_filter_generic_seq;
     ifx_dig_pin_filter_uvc_invalid_pulse_train_sequence pin_filter_invalid_pulse_train_seq;
+     ifx_dig_pin_filter_uvc_valid_pulse_sequence pin_filter_valid_pulse_seq;
 
     //=========================================================================
     // Variables.
@@ -78,7 +79,7 @@ class ifx_dig_testbase extends uvm_test;
      * task used to drive the reset signal of the digital interface for a given period of time
      */
     extern virtual task drive_reset(int reset_duration_ns = 100, bit use_clock_cycle = 0, int numb_of_clocks = 3);
-
+   
     /*
      * task used to configure a filter with the given parameters
      * Default configuration is random
@@ -166,6 +167,7 @@ function void ifx_dig_testbase::build_phase(uvm_phase phase);
     pin_filter_pulse_seq               = ifx_dig_pin_filter_uvc_pulse_sequence::type_id::create("pin_filter_pulse_seq", this);
     pin_filter_generic_seq             = ifx_dig_pin_filter_uvc_generic_sequence::type_id::create("pin_filter_generic_seq", this);
     pin_filter_invalid_pulse_train_seq = ifx_dig_pin_filter_uvc_invalid_pulse_train_sequence::type_id::create("pin_filter_invalid_pulse_train_seq", this);
+    pin_filter_valid_pulse_seq         = ifx_dig_pin_filter_uvc_valid_pulse_sequence::type_id::create("pin_filter_valid_pulse_seq", this);
 
     regblock = ifx_dig_regblock::type_id::create("regblock");
     regblock.build();
@@ -252,7 +254,30 @@ endtask
  * or for for a given number of clock, cycles.
  */
 task ifx_dig_testbase::drive_reset(int reset_duration_ns = 100, bit use_clock_cycle = 0, int numb_of_clocks = 3);
+    if(numb_of_clocks <3) begin
+        `uvm_warning("drive_reset", "numb_of_clocks must be at least 3 clock periods")
+    end
 
+    if(reset_duration_ns < 30) begin
+        `uvm_warning("drive_reset", "reset_duration_ns must be at least 30ns")
+        reset_duration_ns = 30;
+    end    
+
+
+    dig_cfg.dig_vif.rstn_i = 0;
+        if(use_clock_cycle) begin
+            repeat(numb_of_clocks) begin
+                @(posedge dig_cfg.dig_vif.clk_i);
+            end
+                end else begin
+            #(reset_duration_ns * 1ns);
+            @(posedge dig_cfg.dig_vif.clk_i);
+        end
+        dig_cfg.dig_vif.rstn_i = 1;
+
+
+
+    
 endtask : drive_reset
 
 /*

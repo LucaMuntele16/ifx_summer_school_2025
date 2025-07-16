@@ -82,3 +82,7 @@
 /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/tests/ifx_dig_testbase.svh
 /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/tests/ifx_dig_hello_world.svh
 /home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/tests/ifx_dig_hello_world.svh
+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/tests/ifx_dig_sfr_test.svh
+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/tests/ifx_dig_sfr_test.svh
+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/tests/ifx_dig_test_filter_rising.svh
+/home/student22/ifx_summer_school_2025/source/sv/filter_tb/include/tests/ifx_dig_test_filter_rising.svh

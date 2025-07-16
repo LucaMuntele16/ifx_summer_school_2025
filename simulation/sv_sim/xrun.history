@@ -1,2 +1,2 @@
-#e1(15Jul2025:12:47:18): source ./xcelium.d/env.d/env.history.15Jul2025_12_47_18
-s1(15Jul2025:12:47:18):  xrun +UVM_TESTNAME=ifx_dig_hello_world -svseed 1234 -gui -f run.args -s 
+#e1(16Jul2025:12:11:58): source ./xcelium.d/env.d/env.history.16Jul2025_12_11_58
+s1(16Jul2025:12:11:58):  xrun +UVM_TESTNAME=ifx_dig_test_filter_rising -svseed 1234 -gui -f run.args 
