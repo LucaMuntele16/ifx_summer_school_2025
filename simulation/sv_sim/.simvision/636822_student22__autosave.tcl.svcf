@@ -20,26 +20,25 @@ mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor or
 #
 # Design Browser windows
 #
-if {[catch {window new WatchList -name "Design Browser 1" -geometry 947x964+0+0}] != ""} {
-    window geometry "Design Browser 1" 947x964+0+0
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x795+92+107}] != ""} {
+    window geometry "Design Browser 1" 730x795+92+107
 }
 window target "Design Browser 1" on
 browser using {Design Browser 1}
-browser set -scope  simulator::ifx_dig_top.DUT 
+browser set -scope  {simulator::$uvm:{uvm_test_top.dig_env.scoreboard}} 
 browser set \
     -signalsort name
-browser yview see  simulator::ifx_dig_top.DUT 
+browser yview see  {simulator::$uvm:{uvm_test_top.dig_env.scoreboard}} 
 browser timecontrol set -lock 0
 
 #
 # Waveform windows
 #
-if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1241x788+562+127}] != ""} {
-    window geometry "Waveform 1" 1241x788+562+127
+if {[catch {window new WaveWindow -name "Waveform 2" -geometry 1920x1009+0+23}] != ""} {
+    window geometry "Waveform 2" 1920x1009+0+23
 }
-window target "Waveform 1" on
-waveform using {Waveform 1}
-waveform sidebar visibility partial
+waveform using {Waveform 2}
+waveform sidebar select designbrowser
 waveform set \
     -primarycursor TimeA \
     -signalnames name \
@@ -51,13 +50,16 @@ waveform baseline set -time 0
 set id [waveform add -signals  {
 	{simulator::ifx_dig_top.DUT.data_in[15:0]}
 	} ]
-waveform hierarchy expand $id
+waveform hierarchy collapse $id
 set id [waveform add -signals  {
-	{simulator::ifx_dig_top.DUT.data_out[15:0]}
+	waves::worklib.ifx_dig_pkg::ifx_dig_scoreboard.type_name
+	} ]
+set id [waveform add -signals  {
+	{diff(simulator::$uvm:{uvm_test_top.dig_env.scoreboard}.int_pulse_out_gm, simulator::ifx_dig_top.DUT.int_pulse_out)}
 	} ]
 waveform hierarchy expand $id
 
-waveform xview limits 3455000ps 3465000ps
+waveform xview limits 0 170515000ps
 
 #
 # Waveform Window Links
@@ -67,7 +69,7 @@ waveform xview limits 3455000ps 3465000ps
 # Console windows
 #
 console set -windowname Console
-window geometry Console 1430x741+0+31
+window geometry Console 600x250+213+279
 
 #
 # Layout selection

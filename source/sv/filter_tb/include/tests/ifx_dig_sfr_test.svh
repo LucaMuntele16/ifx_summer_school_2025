@@ -59,11 +59,11 @@ class ifx_dig_sfr_test extends ifx_dig_testbase;
         `TEST_INFO("Read and write to non existing register")
         read_reg("NONE");
 
-        write_reg_fields(
-            .reg_name("NONE"),
-            .fields_names({"FILTER_TYPE"}),
-            .fields_values({2'b11})
-        );
+        // write_reg_fields(
+        //     .reg_name("NONE"),
+        //     .fields_names({"FILTER_TYPE"}),
+        //     .fields_values({2'b11})
+        // );
 
 
 

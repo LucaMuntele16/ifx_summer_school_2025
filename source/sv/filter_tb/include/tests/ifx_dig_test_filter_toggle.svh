@@ -69,6 +69,6 @@ class ifx_dig_test_filter_toggle extends ifx_dig_testbase;
         end
 
         phase.drop_objection(this);
-    endtaskc
+    endtask
 
 endclass

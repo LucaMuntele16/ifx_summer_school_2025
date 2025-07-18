@@ -63,5 +63,14 @@ stop -create -name Randomize -randomize
 database -open -shm -into waves.shm shmdb -default
 probe -create -database shmdb ifx_dig_top -all -variables -memories -dynamic -sc_processes -depth all -tasks -functions -uvm
 probe -create -database shmdb $uvm:{uvm_test_top} -all -depth all
+probe -create -database shmdb ifx_dig_top -all -variables -memories -dynamic -sc_processes -depth all -tasks -functions -uvm
+probe -create -database shmdb $uvm:{uvm_test_top} -all -depth all
+probe -create -database shmdb ifx_dig_top -all -variables -memories -dynamic -sc_processes -depth all -tasks -functions -uvm
+probe -create -database shmdb $uvm:{uvm_test_top} -all -depth all
+probe -create -database shmdb ifx_dig_top -all -variables -memories -dynamic -sc_processes -depth all -tasks -functions -uvm
+probe -create -database shmdb $uvm:{uvm_test_top} -all -depth all
+probe -create -database shmdb ifx_dig_top -all -variables -memories -dynamic -sc_processes -depth all -tasks -functions -uvm
+probe -create -database shmdb $uvm:{uvm_test_top} -all -depth all
+probe -create -database shmdb $uvm:{uvm_test_top.dig_env.scoreboard} -all -depth all
 
-simvision -input /home/student22/ifx_summer_school_2025/simulation/sv_sim/.simvision/523138_student22__autosave.tcl.svcf
+simvision -input /home/student22/ifx_summer_school_2025/simulation/sv_sim/.simvision/636822_student22__autosave.tcl.svcf

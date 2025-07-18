@@ -11,7 +11,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 /*
- * TODO: Implement function checks that the data received from the address is the same as the one stored in the register block.
+ * TODO: Implement function checks that the data received from the address is the same as the one stored in the register block. 
  * NOTE: This function should always be called after a read access to a register.
  */
 function void check_read_data(int address, int read_data);
