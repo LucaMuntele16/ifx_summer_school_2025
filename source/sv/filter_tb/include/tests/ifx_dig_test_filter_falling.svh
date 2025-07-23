@@ -10,7 +10,7 @@
  * REVISION:
  *
  * FILE DESCRIPTION:
- * Test will check the valid filtering of the rising edge for all configured filters.
+ * Test will check the valid filtering of the falling edge for all configured filters.
  *
  * In a random order, each filter will:
  *  - be configured with rising edge filter type and interrupt enabled.

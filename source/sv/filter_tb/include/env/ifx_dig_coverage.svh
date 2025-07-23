@@ -14,6 +14,8 @@
  *******************************************************************************/
 
 task collect_coverage();
+
+    `uvm_info("collect_coverage", "\n\n\n\n\nstart collecting coverage\n\n\n\n\n", UVM_NONE)
 fork
   forever begin
     @(reg_write_e);
@@ -141,5 +143,23 @@ covergroup cg_int_status_read with function sample(int id, bit int_stat_bit);
     INT_STAT_vs_ID_crs: cross ID_cp, INT_STAT_cp {
         ignore_bins not_relevant = binsof(INT_STAT_cp.INT_NOT_ACTIVATED);
     }
+
+endgroup
+
+covergroup cg_filtering_type with function sample(int id, int tip);
+    option.per_instance = 1;
+    option.name = "cg_int_status_read";
+
+    ID_filter: coverpoint id {
+        bins ID[] = {[0:`FILT_NB-1]};
+    }
+
+    filter_type: coverpoint tip {
+        bins fall_filter = {2};
+        bins rise_filter = {1};
+        bins both_reset = {3};
+    }
+
+    cross_tip_id: cross ID_filter, filter_type;
 
 endgroup

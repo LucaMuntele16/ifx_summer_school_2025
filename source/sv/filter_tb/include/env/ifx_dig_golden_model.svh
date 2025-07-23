@@ -35,8 +35,6 @@ task golden_model();
 
         monitor_reset();
 
-        collect_coverage();
-
         update_uvc_config();
 
         model_interrupt();
@@ -198,6 +196,10 @@ task model_data_out();
                 if(regblock.get_field_value($sformatf("FILTER_CTRL%0d", filt_packet.id+1), "INT_EN")) begin
                     filt_int_req_b[filt_packet.id] = 1; // set the interrupt request for the filter
                 end
+                cg_filtering_type.sample(
+                    .id(filt_packet.id),
+                .tip(regblock.get_field_value($sformatf("FILTER_CTRL%0d", filt_packet.id+1), "FILTER_TYPE"))
+                );
             end
 
             FILT_NONE: begin
